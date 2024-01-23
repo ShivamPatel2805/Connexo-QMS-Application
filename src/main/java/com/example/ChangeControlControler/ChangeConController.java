@@ -4,8 +4,7 @@ import com.example.ChangeControlDtos.ChangeControlRequest;
 import com.example.ChangeControlEntity.ChangeControl;
 import com.example.ChangeControlRepository.ChangeControlRepo;
 import com.example.ChangeControlService.ChangeConService;
-import com.example.LabIncidentDtos.LabIncRequest;
-import com.example.LabIncidentEntity.Labincident;
+
 
 import java.util.List;
 
