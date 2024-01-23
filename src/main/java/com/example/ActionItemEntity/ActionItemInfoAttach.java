@@ -1,6 +1,8 @@
-package com.example.ExtentionEntity;
+package com.example.ActionItemEntity;
 
 import org.springframework.stereotype.Component;
+
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,20 +12,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class QaAppAttach {
+public class ActionItemInfoAttach {
 	
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String TitleOfDocument;
     private String AttachedFile;
     private String Remark;
-    private String Action;
-
+  
 
 }

@@ -25,5 +25,6 @@ public class ExtentionGeneralInfoAttach {
     private String TitleOfDocument;
     private String AttachedFile;
     private String Remark;
+    private String Action;
 
 }

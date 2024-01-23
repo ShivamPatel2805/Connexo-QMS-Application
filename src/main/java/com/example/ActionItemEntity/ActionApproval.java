@@ -1,6 +1,6 @@
-package com.example.ExtentionEntity;
+package com.example.ActionItemEntity;
 
-import org.springframework.stereotype.Component;
+import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,14 +14,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
-public class QaApprovalGridAttach {
+public class ActionApproval {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	private String TitleOfDocument;
-	private String Remark;
-	private String Action;
 	
+	private String QaReviewComments;
+	private Date DueDateExtensionJustification;
+
 }

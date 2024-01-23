@@ -1,4 +1,4 @@
-package com.example.ExtentionEntity;
+package com.example.ActionItemEntity;
 
 
 import java.sql.Date;
@@ -21,8 +21,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ExtentionGeneralInformation {
+public class ActionItemGeneralInfo {
 	
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,16 +32,12 @@ public class ExtentionGeneralInformation {
 	private String DivisionCode;
 	private String Initiator;
 	private Date DateOfInitiation;
-	private Date CurrentParentDueDate;
+	private String AssignedTo;
+	private Date DueDate;
 	private String ShortDescription;
-	private String JustificationOfExtention;
-	private String Approver;
 	
-	@OneToMany(targetEntity = ExtentionGeneralInfoAttach.class,cascade = CascadeType.ALL)
-    @JoinColumn(name ="GenAttach_fk",referencedColumnName = "id")
-    private List<ExtentionGeneralInfoAttach> extentionGeneralInfoAttach;
-	
-	
-	
+	@OneToMany(targetEntity = ActionItemInfoAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="ActionAttach_fk",referencedColumnName = "id")
+    private List<ActionItemInfoAttach> actionItemInfoAttach;
 
 }

@@ -1,8 +1,7 @@
-package com.example.ExtentionEntity;
+package com.example.ActionItemEntity;
 
-
-
-import org.springframework.stereotype.Component;
+import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,15 +15,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
-public class ExtentionGeneralInfoGridAttach {
+public class PostCompletion {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	
-	private String TitleOfDocument;
-	private String Remark;
-	private String Action;
-
+	private String ActionTaken;
+	private Date ActualStartDate;
+    private Date ActualEndDate;
+    private String Comments;
+    
+    
 }

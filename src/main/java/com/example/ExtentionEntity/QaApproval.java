@@ -30,8 +30,6 @@ public class QaApproval {
     @JoinColumn(name ="QaApprovalAttach_fk",referencedColumnName = "id")
     private List<QaAppAttach> qaApprovalAttach;
 	
-	@OneToMany(targetEntity = QaApprovalGridAttach.class,cascade = CascadeType.ALL)
-    @JoinColumn(name ="QaApprovalGridAttach_fk",referencedColumnName = "id")
-    private List<QaApprovalGridAttach> qaApprovalGridAttach;
+
 
 }
