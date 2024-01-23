@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@CrossOrigin("http://Localhost:5173")
 @RequestMapping("/LabIncident/api")
 public class LabIncController {
     @Autowired
