@@ -1,6 +1,6 @@
 package com.example.ExternalAuditEntity;
 
-import com.example.ActionItemEntity.ActionItemInfoAttach;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class AuditRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String recordNumber;
     private String LocationCode;
     private String initiator;

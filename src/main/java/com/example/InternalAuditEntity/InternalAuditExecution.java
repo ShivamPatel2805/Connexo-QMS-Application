@@ -1,4 +1,4 @@
-package com.example.ExternalAuditEntity;
+package com.example.InternalAuditEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,24 +12,22 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuditExecution {
+@Table(name = "AuditExecution")
+public class InternalAuditExecution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
 
     private Date auditStartDate;
 
-
     private Date auditEndDate;
-
-
 
     private String auditComments;
 
-    @OneToMany(targetEntity = ExternalAuditAttach.class,cascade = CascadeType.ALL)
-    @JoinColumn(name ="ExternalAuditAttach_fk",referencedColumnName = "id")
-    private List<ExternalAuditAttach> externalAuditAttach;
+    @OneToMany(targetEntity = InternalAuditAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="InternalAuditAttach_fk",referencedColumnName = "id")
+    private List<InternalAuditAttach> internalAuditAttache;
 
 
 }

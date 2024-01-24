@@ -1,9 +1,9 @@
 package com.example.ExternalAuditRepo;
 
-import com.example.ExternalAuditEntity.AuditExecution;
+import com.example.ExternalAuditEntity.ExternalAuditExecution;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ExternalGuideAttachRepo extends JpaRepository<AuditExecution, Long>{
+public interface ExternalGuideAttachRepo extends JpaRepository<ExternalAuditExecution, Long>{
 }

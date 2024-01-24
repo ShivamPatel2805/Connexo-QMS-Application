@@ -21,9 +21,9 @@ public class ExternalAuditMain {
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
     private List<AuditRecord> auditRecord;
 
-    @OneToMany(targetEntity = AuditExecution.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = ExternalAuditExecution.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-    private List<AuditExecution> auditExecution;
+    private List<ExternalAuditExecution> auditExecution;
 
     @OneToMany(targetEntity = AuditPreparation.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")

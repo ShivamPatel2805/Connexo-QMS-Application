@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="AuditPlanning")
-public class AuditPlanning {
+public class InternalAuditPlanning {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

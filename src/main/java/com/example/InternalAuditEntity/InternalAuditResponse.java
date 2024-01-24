@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "AuditResponse")
-public class AuditResponse {
+public class InternalAuditResponse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

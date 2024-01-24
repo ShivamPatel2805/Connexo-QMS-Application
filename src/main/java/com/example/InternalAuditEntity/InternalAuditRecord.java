@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="AuditRecord")
-public class AuditRecord {
+public class InternalAuditRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

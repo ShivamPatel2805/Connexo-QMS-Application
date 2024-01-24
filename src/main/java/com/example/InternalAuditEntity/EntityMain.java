@@ -26,24 +26,24 @@ public class EntityMain {
     private Long id;
     private String Name;
 
-    @OneToMany(targetEntity =AuditExecution.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =InternalAuditExecution.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-    private List<AuditExecution> auditExecutions;
+    private List<InternalAuditExecution> auditExecutions;
 
-    @OneToMany(targetEntity = AuditPlanning.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = InternalAuditPlanning.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-    private List<AuditPlanning> auditPlannings;
+    private List<InternalAuditPlanning> auditPlannings;
 
-    @OneToMany(targetEntity =AuditPreparation.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =InternalAuditPreparation.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-    private List<AuditPreparation> auditPreparations;
+    private List<InternalAuditPreparation> auditPreparations;
 
-    @OneToMany(targetEntity =AuditRecord.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =InternalAuditRecord.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-    private List<AuditRecord> auditRecords;
+    private List<InternalAuditRecord> auditRecords;
 
-    @OneToMany(targetEntity =AuditResponse.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =InternalAuditResponse.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-    private List<AuditResponse> auditResponses;
+    private List<InternalAuditResponse> auditResponses;
 
 }

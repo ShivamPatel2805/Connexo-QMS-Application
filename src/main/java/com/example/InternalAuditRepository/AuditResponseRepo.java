@@ -1,5 +1,5 @@
 package com.example.InternalAuditRepository;
-import com.example.InternalAuditEntity.AuditResponse;
+import com.example.InternalAuditEntity.InternalAuditResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
-public interface AuditResponseRepo extends JpaRepository<AuditResponse, Long>{
+public interface AuditResponseRepo extends JpaRepository<InternalAuditResponse, Long>{
 }
