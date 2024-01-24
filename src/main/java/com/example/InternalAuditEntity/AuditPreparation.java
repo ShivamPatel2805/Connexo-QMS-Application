@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.Date;
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -15,15 +17,24 @@ public class AuditPreparation {
     @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String preparationNumber;
-    private String assignedTo;
-    private Date dateOfAssignment;
-    private Date dueDate;
-    private String preparationGroup;
-    private String preparationGroupCode;
-    private String shortDescription;
-    private String preparationType;
-    private String otherPreparationType;
-    private String initialComments;
-    private String initialAttachment;
+    private String leadAuditor;
+    private String auditTeam;
+    private String externalAuditDetails;
+    private String externalAuditingAgency;
+    private String relevantGuideline;
+    private String QAComments;
+    private String auditCategory;
+    private String supplierDetail;
+    private String supplierSite;
+    private String comments;
+
+
+
+    @OneToMany(targetEntity = InternalFileAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="InternalFileAttach_fk",referencedColumnName = "id")
+    private List<InternalFileAttach> internalFileAttache;
+
+    @OneToMany(targetEntity = InternalGuidelineAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="InternalGuideLineAttach_fk",referencedColumnName = "id")
+    private List<InternalGuidelineAttach> internalGuidelineAttache;
 }

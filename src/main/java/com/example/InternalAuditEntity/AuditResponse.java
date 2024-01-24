@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,12 +22,17 @@ public class AuditResponse {
 
     private Integer referenceRecordId;
 
-    private String reportAttachments;
-
-    private String auditAttachments;
-
     private String auditComments;
 
     private Date dueDateExtensionJustification;
 
+
+
+    @OneToMany(targetEntity = InternalInitialAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="InternalInitialAttach_fk",referencedColumnName = "id")
+    private List<InternalInitialAttach> internalInitialAttache;
+
+    @OneToMany(targetEntity = InternalAuditClosureAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="InternalAuditClosureAttach_fk",referencedColumnName = "id")
+    private List<InternalAuditClosureAttach> internalAuditClosureAttache;
 }

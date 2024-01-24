@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -22,11 +23,11 @@ public class AuditExecution {
 
     private Date auditEndDate;
 
-    private String auditAttachments;
-
     private String auditComments;
 
-
+    @OneToMany(targetEntity = InternalAuditAttach.class,cascade = CascadeType.ALL)
+    @JoinColumn(name ="InternalAuditAttach_fk",referencedColumnName = "id")
+    private List<InternalAuditAttach> internalAuditAttache;
 
 
 }

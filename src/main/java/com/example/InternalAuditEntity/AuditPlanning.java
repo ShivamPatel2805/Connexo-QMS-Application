@@ -20,13 +20,10 @@ public class AuditPlanning {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String areaOfAudit;
     private Date scheduledStartDate;
-    private String scheduledStartTime;
     private Date scheduledEndDate;
-    private String scheduledEndTime;
     private String auditor;
-    private String auditee;
-    private String remarks;
+    private String product;
+    private String comment;
 
 }
