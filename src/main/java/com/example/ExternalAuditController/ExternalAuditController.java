@@ -1,9 +1,11 @@
 package com.example.ExternalAuditController;
 
+import com.example.ECEntity.ECmain;
 import com.example.ExternalAuditDtos.ExternalAuditRequest;
 import com.example.ExternalAuditEntity.ExternalAuditMain;
 import com.example.ExternalAuditRepo.ExternalAuditMainRepo;
 import com.example.ExternalAuditService.ExternalAuditMainService;
+import com.example.RCAEntity.RCAmain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,6 +37,12 @@ public class ExternalAuditController {
         return externalAuditMainService.getExternalAuditMainById(id);
     }
 
+
+    @PutMapping("/update/{id}")
+    public ExternalAuditMain updateRCAmain(@PathVariable long id, @RequestBody ExternalAuditMain externalAuditMain) {
+        return externalAuditMainService.updateExternalAuditMain(id, externalAuditMain);
+
+    }
 
 
 }
