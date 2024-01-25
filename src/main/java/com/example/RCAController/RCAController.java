@@ -36,7 +36,7 @@ public class RCAController {
     }
 
     @GetMapping("/GetBy/{id}")
-    public RCAmain getExternalAuditMainById(@PathVariable Long id) {
+    public RCAmain getRCAMainById(@PathVariable Long id) {
         return rcaService.getRCAMainById(id);
     }
 
