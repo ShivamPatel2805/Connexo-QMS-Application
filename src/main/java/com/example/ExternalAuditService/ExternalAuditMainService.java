@@ -28,4 +28,15 @@ public class ExternalAuditMainService {
 
 
 
+    public ExternalAuditMain updateExternalAuditMain(long id, ExternalAuditMain externalAuditMain) {
+        ExternalAuditMain existingDeatils = externalAuditMainRepo.findById(id).get();
+        existingDeatils.setAuditRecord(externalAuditMain.getAuditRecord());
+        existingDeatils.setAuditExecution(externalAuditMain.getAuditExecution());
+        existingDeatils.setAuditPreparation(externalAuditMain.getAuditPreparation());
+        existingDeatils.setAuditPlanning(externalAuditMain.getAuditPlanning());
+        existingDeatils.setAuditResponse(externalAuditMain.getAuditResponse());
+
+        return externalAuditMainRepo.save(existingDeatils);
+
+    }
 }
