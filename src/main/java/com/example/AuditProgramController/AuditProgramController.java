@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.ActionItemEntity.ActionItem;
 import com.example.AuditProgramDtos.AuditProgramRequest;
 import com.example.AuditProgramEntity.AuditProgram;
 import com.example.AuditProgramRepository.AuditProgramRepo;
@@ -26,7 +28,7 @@ public class AuditProgramController {
 	private AuditProgramRepo auditprogramrepo;
 	
 	@Autowired
-	private AuditProgramService  actionitemservice;
+	private AuditProgramService  auditprogramservice;
 	
 	@PostMapping("/create")
     public AuditProgram createAuditProgram(@RequestBody AuditProgramRequest auditProgramRequest){
@@ -41,7 +43,13 @@ public class AuditProgramController {
 
           @GetMapping("/GetBy/{id}")
           public AuditProgram getActionItemById(@PathVariable Long id) {
-           return actionitemservice.getAuditProgramById(id);
+           return auditprogramservice.getAuditProgramById(id);
      
         }
+          
+          @PutMapping("/update/{id}")
+          public AuditProgram updateAuditProgram(@PathVariable long id, @RequestBody AuditProgram auditprogram) {
+          	return auditprogramservice.updateAuditProgram(id, auditprogram);
+       	   
+          }
 }

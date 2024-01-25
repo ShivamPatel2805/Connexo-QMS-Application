@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+import com.example.ChangeControlEntity.ChangeControl;
 import com.example.ExtentionEntity.Extention;
 import com.example.ExtentionRepository.ExtentionRepo;
 
@@ -26,6 +26,16 @@ public class ExtentionService {
     public Extention getExtentionById(long id) {
         return extentionRepo.findById(id).get();
     }
+    
+    public Extention updateExtention(long id, Extention extention) {
+    	Extention existingDeatils = extentionRepo.findById(id).get();
+		existingDeatils.setExtentionGeneralInformation(extention.getExtentionGeneralInformation());
+		existingDeatils.setQaApproval(extention.getQaApproval());
+		
+		return extentionRepo.save(existingDeatils);
+		
+	}
+ 
 	
 
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,7 +34,7 @@ public class ChangeConController {
         return changeControlRepo.save(changeControlRequest.getChangeControl());
     }
     
-    @GetMapping("/findAllDivision")
+    @GetMapping("/findAllDivision")   
     public List<ChangeControl> findAllDivision(){
         return changeControlRepo.findAll();
     }
@@ -41,5 +42,10 @@ public class ChangeConController {
     @GetMapping("/GetBy/{id}")
     public ChangeControl getChangeControlById(@PathVariable Long id) {
         return changeConService.getChangeControlById(id);
+    }
+    @PutMapping("/update/{id}")
+    public ChangeControl updateChangeControl(@PathVariable long id, @RequestBody ChangeControl changecontrol) {
+    	return changeConService.updateChangeControl(id, changecontrol);
+ 	   
     }
 }

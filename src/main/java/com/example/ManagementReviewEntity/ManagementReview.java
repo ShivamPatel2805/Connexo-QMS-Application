@@ -27,5 +27,18 @@ public class ManagementReview {
 	  @OneToMany(targetEntity =ManagementGenInfo.class,cascade = CascadeType.ALL)
 	    @JoinColumn(name ="Change_fk",referencedColumnName = "id")
 	    private List<ManagementGenInfo> managementGenInfo;
+	  
+	  @OneToMany(targetEntity =OperationPlanning.class,cascade = CascadeType.ALL)
+	    @JoinColumn(name ="Change_fk",referencedColumnName = "id")
+	    private List<OperationPlanning> operationPlanning;
+	  
+	  @OneToMany(targetEntity =Meetings.class,cascade = CascadeType.ALL)
+	    @JoinColumn(name ="Change_fk",referencedColumnName = "id")
+	    private List<Meetings> meetings;
+	  
+
+	  @OneToMany(targetEntity =Clouser.class,cascade = CascadeType.ALL)
+	    @JoinColumn(name ="Change_fk",referencedColumnName = "id")
+	    private List<Clouser> clouser;
 
 }

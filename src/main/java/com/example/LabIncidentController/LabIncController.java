@@ -30,7 +30,7 @@ public class LabIncController {
     public Labincident createDivision(@RequestBody LabIncRequest request){
         return labIncRepository.save(request.getLabincident());
     }
-    @GetMapping("/findAllDivision")
+    @GetMapping("/getAll")
     public List<Labincident> findAllDivision(){
         return labIncRepository.findAll();
     }
@@ -40,21 +40,8 @@ public class LabIncController {
         return labIncidentService.getProductById(id);
     }
 
- /*   @PutMapping("/UpdateBy/{id}")
-    public GeneralInformation updateProduct(@PathVariable long id, @RequestBody GeneralInformation generalInformation) {
-        return labIncidentService.updateProduct(id, generalInformation);
-    }*/
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Labincident> updateLabincident(@PathVariable Long id, @RequestBody Labincident updatedLabincident) {
-        // Perform validation, error handling, etc.
-        Labincident result = labIncidentService.updateLabincident(updatedLabincident);
-        return ResponseEntity.ok(result);
-    }
-
-    @PutMapping("/UpdateField/{id}")
-    public ResponseEntity<String> updateProductFields(@PathVariable Long id, @RequestBody Map<String, Object> fields){
-        labIncidentService.updateProductByFields(id,fields);
-        return  ResponseEntity.ok("update Successfull");
+    @PutMapping("/UpdateBy/{id}")
+    public Labincident updateProduct(@PathVariable long id, @RequestBody Labincident labincident) {
+        return labIncidentService.updateLabIncident(id, labincident);
     }
 }
