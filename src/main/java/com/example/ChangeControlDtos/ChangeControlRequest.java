@@ -12,4 +12,12 @@ import lombok.ToString;
 @ToString
 public class ChangeControlRequest {
     private ChangeControl changeControl;
+
+    public ChangeControl getChangeControl() {
+        return changeControl;
+    }
+
+    public void setChangeControl(ChangeControl changeControl) {
+        this.changeControl = changeControl;
+    }
 }

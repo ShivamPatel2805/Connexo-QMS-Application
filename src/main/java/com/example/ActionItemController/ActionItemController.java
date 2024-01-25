@@ -34,12 +34,14 @@ public class ActionItemController {
     
     @GetMapping("/findAllDivision")
     public List<ActionItem> findAllDivision(){
-        return actionItemrepo.findAll();
+
+          return actionItemrepo.findAll();
     }
 
     @GetMapping("/GetBy/{id}")
     public ActionItem getActionItemById(@PathVariable Long id) {
-        return actionitemservice.getActionItemById(id);
+
+          return actionitemservice.getActionItemById(id);
     }
 
 	

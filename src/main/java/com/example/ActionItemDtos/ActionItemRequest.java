@@ -16,4 +16,5 @@ import lombok.ToString;
 public class ActionItemRequest {
 
 	private ActionItem actionItem;
+
 }
