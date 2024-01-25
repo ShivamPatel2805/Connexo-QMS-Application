@@ -39,7 +39,11 @@ public class RCAController {
     public RCAmain getRCAMainById(@PathVariable Long id) {
         return rcaService.getRCAMainById(id);
     }
+    @PutMapping("/update/{id}")
+    public RCAmain updateRCAmain(@PathVariable long id, @RequestBody RCAmain rcAmain) {
+        return rcaService.updateRCAmain(id, rcAmain);
 
+    }
 
 
 }

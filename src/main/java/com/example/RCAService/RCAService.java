@@ -29,6 +29,13 @@ public class RCAService {
         return rcAmainRepo.findById(id).get();
     }
 
+    public RCAmain updateRCAmain(long id, RCAmain rcAmain) {
+        RCAmain existingDeatils = rcAmainRepo.findById(id).get();
+        existingDeatils.setRCAInvestigation(rcAmain.getRCAInvestigation());
+        existingDeatils.setRCAGroupComments(rcAmain.getRCAGroupComments());
+        existingDeatils.setRCARootCause(rcAmain.getRCARootCause());
+        return rcAmainRepo.save(existingDeatils);
 
+    }
 
 }
