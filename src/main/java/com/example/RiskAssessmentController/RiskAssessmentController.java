@@ -1,6 +1,7 @@
 package com.example.RiskAssessmentController;
 
 
+import com.example.ECEntity.ECmain;
 import com.example.RiskAssessmentDtos.RiskAssessmentDtos;
 import com.example.RiskAssessmentEntity.RiskEntityMain;
 import com.example.RiskAssessmentRepository.RiskEntityMainRepository;
@@ -26,14 +27,19 @@ public class RiskAssessmentController {
         return riskEntityMainRepo.save(riskAssessmentDtos.getRiskEntityMain());
     }
 
-
     @GetMapping("/findAll")
     public List<RiskEntityMain> findAll() {
         return riskEntityMainRepo.findAll();
     }
 
+
     @GetMapping("/GetBy/{id}")
     public RiskEntityMain getRiskEntityGetByID(@PathVariable Long id) {
         return riskAssessmentMainService.getRiskEntityMain(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public RiskEntityMain updateEntityMain(@PathVariable long id, @RequestBody RiskEntityMain riskEntityMain) {
+        return riskAssessmentMainService.updateEntityMain(id, riskEntityMain);
     }
 }
