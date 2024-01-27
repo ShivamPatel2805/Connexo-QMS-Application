@@ -15,14 +15,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class DocumentDraftAttach {
+public class EnviromentalCriticalStepAttach {
+
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	private String TitleOfDocument;
-	private String AttachedFile;
+	private String Step;
+	private String Reasons;
+	private String ExpectedTestsOutComes;
+	private String AcceptableValue;
+	private String Attachment;
 	private String Remark;
-
-
 }

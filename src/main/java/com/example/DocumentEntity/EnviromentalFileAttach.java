@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class DocumentDraftAttach {
+public class EnviromentalFileAttach {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,5 @@ public class DocumentDraftAttach {
 	private String TitleOfDocument;
 	private String AttachedFile;
 	private String Remark;
-
 
 }

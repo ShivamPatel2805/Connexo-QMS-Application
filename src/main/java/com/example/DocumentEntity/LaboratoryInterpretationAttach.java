@@ -1,6 +1,8 @@
 package com.example.DocumentEntity;
 
-import org.springframework.stereotype.Component;
+import java.sql.Date;
+import java.sql.Time;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,15 +16,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
-public class DocumentDraftAttach {
+public class LaboratoryInterpretationAttach {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	private String TitleOfDocument;
-	private String AttachedFile;
-	private String Remark;
-
+	private String Result;
+	private String Interpretation;
+	private Date DateRestriction;
+	private Time TimeRestriction;
+	private String Precaution;
+	
 
 }

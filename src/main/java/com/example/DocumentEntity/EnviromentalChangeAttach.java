@@ -1,6 +1,10 @@
 package com.example.DocumentEntity;
 
+import java.sql.Date;
+
 import org.springframework.stereotype.Component;
+
+import com.example.DocumentEntity.DocumentEffectiveAttach;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,14 +19,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class DocumentDraftAttach {
+public class EnviromentalChangeAttach {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	private String TitleOfDocument;
-	private String AttachedFile;
-	private String Remark;
-
+	private String RecordId;
+	private String Division;
+	private String Process;
+	private String ShortDescription;
+	private Date DateOpened;
+	private String AssignedTo;
+	private Date DueDate;
+	private String Status;
 
 }

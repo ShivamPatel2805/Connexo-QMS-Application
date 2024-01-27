@@ -3,8 +3,6 @@ package com.example.DocumentEntity;
 import java.sql.Date;
 import java.util.List;
 
-import com.example.ActionItemEntity.ActionItemInfoAttach;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

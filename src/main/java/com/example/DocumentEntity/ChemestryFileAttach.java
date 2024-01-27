@@ -1,7 +1,6 @@
 package com.example.DocumentEntity;
 
 import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class DocumentDraftAttach {
+public class ChemestryFileAttach {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +22,5 @@ public class DocumentDraftAttach {
 	private String TitleOfDocument;
 	private String AttachedFile;
 	private String Remark;
-
 
 }

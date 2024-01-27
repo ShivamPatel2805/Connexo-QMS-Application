@@ -32,6 +32,7 @@ public class DocumentService {
     public Document updateDocument(long id, Document document) {
     	Document existingDeatils = documentRepo.findById(id).get();
 		existingDeatils.setDocumentInfo( document.getDocumentInfo());
+		//existingDeatils.setChemestrySop( document.getChemestrySop());
 		return documentRepo.save(existingDeatils);
 		
 	}
