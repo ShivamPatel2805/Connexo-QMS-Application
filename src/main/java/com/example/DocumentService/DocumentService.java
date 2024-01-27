@@ -32,6 +32,15 @@ public class DocumentService {
     public Document updateDocument(long id, Document document) {
     	Document existingDeatils = documentRepo.findById(id).get();
 		existingDeatils.setDocumentInfo( document.getDocumentInfo());
+		existingDeatils.setChemestrySop( document.getChemestrySop());
+		existingDeatils.setInstrumentSop( document.getInstrumentSop());
+		existingDeatils.setMicrobiologySop( document.getMicrobiologySop());
+		existingDeatils.setInstrChemestrySop( document.getInstrChemestrySop());
+		existingDeatils.setLaboratoryPractices( document.getLaboratoryPractices());
+		existingDeatils.setEnviromentalLaboratory( document.getEnviromentalLaboratory());
+		existingDeatils.setWetChemestry( document.getWetChemestry());
+		existingDeatils.setTrainingInformation( document.getTrainingInformation());
+		existingDeatils.setDistribution( document.getDistribution());
 		//existingDeatils.setChemestrySop( document.getChemestrySop());
 		return documentRepo.save(existingDeatils);
 		

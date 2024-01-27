@@ -48,8 +48,20 @@ public class Document {
 	    @JoinColumn(name ="Change_fk",referencedColumnName = "id")
 	    private List<LaboratoryPractices> laboratoryPractices;
 	  
-	  @OneToMany(targetEntity =EnviromentalLaboratory.class,cascade = CascadeType.ALL)
+	  @OneToMany(targetEntity =IfOthers.class,cascade = CascadeType.ALL)
 	    @JoinColumn(name ="Change_fk",referencedColumnName = "id")
-	    private List<EnviromentalLaboratory> enviromentalLaboratory;
+	    private List<IfOthers> enviromentalLaboratory;
+	  
+	  @OneToMany(targetEntity =WetChemestry.class,cascade = CascadeType.ALL)
+	    @JoinColumn(name ="WetChemestry_fk",referencedColumnName = "id")
+	    private List<WetChemestry> wetChemestry;
+	  
+	  @OneToMany(targetEntity =TrainingInformation.class,cascade = CascadeType.ALL)
+	    @JoinColumn(name ="TrainingInformation_fk",referencedColumnName = "id")
+	    private List<TrainingInformation> trainingInformation;
+	  
+	  @OneToMany(targetEntity =Distribution.class,cascade = CascadeType.ALL)
+	    @JoinColumn(name ="Distribution_fk",referencedColumnName = "id")
+	    private List<Distribution> distribution;
 
 }

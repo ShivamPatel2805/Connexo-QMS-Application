@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class EnviromentalChangeAttach {
+public class IfOthersChangeAttach {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

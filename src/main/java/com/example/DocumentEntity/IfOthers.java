@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EnviromentalLaboratory {
+public class IfOthers {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,17 +33,17 @@ public class EnviromentalLaboratory {
     private String Calculation;
     private String Refer;
     
-    @OneToMany(targetEntity =  EnviromentalCriticalStepAttach.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =  IfOthersCriticalStepAttach.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="EnviromentalCriticalStepAttach_fk",referencedColumnName = "id")
-    private List< EnviromentalCriticalStepAttach>  enviromentalCriticalStepAttach;
+    private List< IfOthersCriticalStepAttach>  enviromentalCriticalStepAttach;
     
-    @OneToMany(targetEntity =  EnviromentalFileAttach.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =  IfOthersFileAttach.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="EnviromentalFileAttach_fk",referencedColumnName = "id")
-    private List<EnviromentalFileAttach>  enviromentalFileAttach;
+    private List<IfOthersFileAttach>  enviromentalFileAttach;
     
-    @OneToMany(targetEntity =  EnviromentalChangeAttach.class,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity =  IfOthersChangeAttach.class,cascade = CascadeType.ALL)
     @JoinColumn(name ="EnviromentalChangeAttach_fk",referencedColumnName = "id")
-    private List<EnviromentalChangeAttach>  enviromentalChangeAttach;
+    private List<IfOthersChangeAttach>  enviromentalChangeAttach;
     
     
 }

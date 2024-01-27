@@ -1,7 +1,5 @@
 package com.example.DocumentEntity;
 
-import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,17 +12,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Component
-public class EnviromentalCriticalStepAttach {
-
+public class TrainingSurvey {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	private String Step;
-	private String Reasons;
-	private String ExpectedTestsOutComes;
-	private String AcceptableValue;
-	private String Attachment;
-	private String Remark;
+	private String Subject;
+	private String Topic;
+	private String Rating;
+	private String Comments;
+
 }

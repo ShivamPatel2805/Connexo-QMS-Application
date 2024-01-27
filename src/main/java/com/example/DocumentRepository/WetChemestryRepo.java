@@ -3,8 +3,8 @@ package com.example.DocumentRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.DocumentEntity.IfOthersFileAttach;
+import com.example.DocumentEntity.WetChemestry;
 @Repository
-public interface EnviromentalFileAttachRepo extends JpaRepository<IfOthersFileAttach, Long>{
+public interface WetChemestryRepo extends JpaRepository<WetChemestry, Long>{
 
 }
