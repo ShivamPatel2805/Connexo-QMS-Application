@@ -1,6 +1,6 @@
 package com.example.RiskAssessmentDtos;
 
-import com.example.InternalAuditEntity.EntityMain;
+import com.example.InternalAuditEntity.InternalEntityMain;
 import com.example.RiskAssessmentEntity.RiskEntityMain;
 import lombok.AllArgsConstructor;
 import lombok.Data;

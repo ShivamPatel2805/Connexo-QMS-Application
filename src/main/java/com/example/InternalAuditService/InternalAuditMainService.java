@@ -1,6 +1,6 @@
 package com.example.InternalAuditService;
 
-import com.example.InternalAuditEntity.EntityMain;
+import com.example.InternalAuditEntity.InternalEntityMain;
 import com.example.InternalAuditRepository.InternalAuditMainRepo;
 import com.example.RiskAssessmentEntity.RiskEntityMain;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,25 +11,25 @@ import java.util.List;
 @Service
 public class InternalAuditMainService {
     @Autowired
-    private EntityMain entityMain;
+    private InternalEntityMain entityMain;
 
     @Autowired
     private InternalAuditMainRepo internalAuditMainRepo;
 
-    public EntityMain SaveEntityMain(EntityMain entityMain) {
+    public InternalEntityMain SaveEntityMain(InternalEntityMain entityMain) {
         return internalAuditMainRepo.save(entityMain);
     }
 
-    public List<EntityMain> getAllEntities() {
+    public List<InternalEntityMain> getAllEntities() {
         return internalAuditMainRepo.findAll();
     }
 
-    public EntityMain getEntityMain(long id) {
+    public InternalEntityMain getEntityMain(long id) {
         return internalAuditMainRepo.findById(id).get();
     }
 
-    public EntityMain updateInternalMain(long id, EntityMain entityMain) {
-        EntityMain existingEntity = internalAuditMainRepo.findById(id).get();
+    public InternalEntityMain updateInternalMain(long id, InternalEntityMain entityMain) {
+        InternalEntityMain existingEntity = internalAuditMainRepo.findById(id).get();
         existingEntity.setAuditExecutions(entityMain.getAuditExecutions());
         existingEntity.setAuditPlannings(entityMain.getAuditPlannings());
         existingEntity.setAuditPreparations(entityMain.getAuditPreparations());

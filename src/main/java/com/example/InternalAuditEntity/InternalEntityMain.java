@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
-public class EntityMain {
+public class InternalEntityMain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

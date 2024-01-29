@@ -3,7 +3,7 @@ package com.example.InternalAuditController;
 
 import com.example.InternalAuditService.InternalAuditMainService;
 import com.example.InternalAuditDtos.InternalAudDtos;
-import com.example.InternalAuditEntity.EntityMain;
+import com.example.InternalAuditEntity.InternalEntityMain;
 import com.example.InternalAuditRepository.InternalAuditMainRepo;
 import com.example.RiskAssessmentEntity.RiskEntityMain;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,22 +23,22 @@ public class InternalAudController {
     private InternalAuditMainRepo internalAuditMainRepo;
 
     @PostMapping("/create")
-    public EntityMain createExtention(@RequestBody InternalAudDtos internalAudDtos) {
+    public InternalEntityMain createExtention(@RequestBody InternalAudDtos internalAudDtos) {
         return internalAuditMainRepo.save(internalAudDtos.getEntityMain());
     }
 
     @GetMapping("/findAll")
-    public List<EntityMain> findAllDivision() {
+    public List<InternalEntityMain> findAllDivision() {
         return internalAuditMainRepo.findAll();
     }
 
     @GetMapping("/GetBy/{id}")
-    public EntityMain getActionItemById(@PathVariable Long id) {
+    public InternalEntityMain getActionItemById(@PathVariable Long id) {
         return internalAuditMainService.getEntityMain(id);
     }
 
     @PutMapping("/update/{id}")
-    public EntityMain updateInternalMain(@PathVariable long id, @RequestBody EntityMain entityMain) {
+    public InternalEntityMain updateInternalMain(@PathVariable long id, @RequestBody InternalEntityMain entityMain) {
         return internalAuditMainService.updateInternalMain(id, entityMain);
     }
 }
