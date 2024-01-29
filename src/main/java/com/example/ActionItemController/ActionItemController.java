@@ -3,9 +3,11 @@ package com.example.ActionItemController;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +18,9 @@ import com.example.ActionItemRepository.ActionItemRepo;
 import com.example.ActionItemService.ActionItemService;
 
 
+
 @RestController
+@CrossOrigin("http://Localhost:5173")
 @RequestMapping("/actionitem/api")
 public class ActionItemController {
 	
@@ -43,7 +47,10 @@ public class ActionItemController {
 
           return actionitemservice.getActionItemById(id);
     }
-
-	
-
+    
+    @PutMapping("/update/{id}")
+    public ActionItem updateActionItem(@PathVariable long id, @RequestBody ActionItem actionitem) {
+    	return actionitemservice.updateActionItem(id, actionitem);
+ 	   
+    }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.ActionItemEntity.ActionItem;
 import com.example.AuditProgramEntity.AuditProgram;
 import com.example.AuditProgramRepository.AuditProgramRepo;
 
@@ -28,6 +29,12 @@ public class AuditProgramService {
         return auditProgramRepo.findById(id).get();
     }
 	
+    public AuditProgram updateAuditProgram(long id, AuditProgram auditprogram) {
+    	AuditProgram existingDeatils = auditProgramRepo.findById(id).get();
+		existingDeatils.setAuditGeneralInfo(auditprogram.getAuditGeneralInfo());
+		return auditProgramRepo.save(existingDeatils);
+		
+	}
 
 
 }

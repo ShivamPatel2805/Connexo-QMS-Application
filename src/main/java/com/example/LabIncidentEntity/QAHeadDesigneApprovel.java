@@ -1,5 +1,7 @@
 package com.example.LabIncidentEntity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +20,7 @@ public class QAHeadDesigneApprovel {
     private Long id;
     private String InvestigationDetails;
    private String EffectivenessCheckrequired;
-   private String EffectivenessCheckCreationDate;
+   private Date EffectivenessCheckCreationDate;
    private String EffectivnessChecker;
    private String Conclusion;
    private String DueDateExtentionJustification;
