@@ -26,9 +26,9 @@ public class GeneralInformation {
     private Date DueDate;
     private String InitiatorGroup;
     private String ShortDescription;
-
+    private Date DateOfInitiation;
     private String IncidentCategory;
-    private String InvocationType;
+   // private String InvocationType;
 
     /*========================For_File_Attachment===========================*/
     @OneToMany(targetEntity = InitialAttachment.class,cascade = CascadeType.ALL)
