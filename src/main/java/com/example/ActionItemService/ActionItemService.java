@@ -21,10 +21,12 @@ public class ActionItemService {
     }
     
     public List<ActionItem> getAllEntities() {
+
         return actionItemRepo.findAll();
     }
 
     public ActionItem getActionItemById(long id) {
+
         return actionItemRepo.findById(id).get();
     }
 	
