@@ -1,8 +1,5 @@
 package com.example.RCAEntity;
 
-import com.example.ExternalAuditEntity.AuditExecution;
-import com.example.ExternalAuditEntity.AuditPreparation;
-import com.example.ExternalAuditEntity.AuditRecord;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

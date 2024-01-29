@@ -5,6 +5,7 @@ import com.example.InternalAuditService.InternalAuditMainService;
 import com.example.InternalAuditDtos.InternalAudDtos;
 import com.example.InternalAuditEntity.EntityMain;
 import com.example.InternalAuditRepository.InternalAuditMainRepo;
+import com.example.RiskAssessmentEntity.RiskEntityMain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,6 @@ public class InternalAudController {
         return internalAuditMainRepo.save(internalAudDtos.getEntityMain());
     }
 
-
     @GetMapping("/findAll")
     public List<EntityMain> findAllDivision() {
         return internalAuditMainRepo.findAll();
@@ -35,5 +35,10 @@ public class InternalAudController {
     @GetMapping("/GetBy/{id}")
     public EntityMain getActionItemById(@PathVariable Long id) {
         return internalAuditMainService.getEntityMain(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public EntityMain updateInternalMain(@PathVariable long id, @RequestBody EntityMain entityMain) {
+        return internalAuditMainService.updateInternalMain(id, entityMain);
     }
 }

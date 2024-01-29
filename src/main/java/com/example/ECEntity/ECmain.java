@@ -1,6 +1,5 @@
 package com.example.ECEntity;
 
-import com.example.ExternalAuditEntity.AuditExecution;
 import com.example.ExternalAuditEntity.AuditRecord;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
