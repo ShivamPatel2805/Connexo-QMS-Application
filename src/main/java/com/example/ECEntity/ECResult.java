@@ -14,7 +14,7 @@ import java.util.List;
 public class ECResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String eSummary;
     private String eResults;
     private String addendumComments;

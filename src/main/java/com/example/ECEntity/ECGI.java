@@ -16,7 +16,7 @@ import java.util.Date;
 public class ECGI {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String recordNumber;
     private String LocationCode;
     private String initiator;
