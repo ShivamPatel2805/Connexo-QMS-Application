@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin("http://Localhost:5173")
 @RequestMapping("/api/v1")
 public class ImageUploadController {
 

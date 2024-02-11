@@ -17,6 +17,7 @@ import com.example.util.NetworkConstant;
 import java.util.List;
 
 @RestController
+@CrossOrigin("http://Localhost:5173")
 @RequestMapping("/api/v1/entity")
 public class EntityMainController {
 

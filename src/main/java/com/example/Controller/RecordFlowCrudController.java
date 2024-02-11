@@ -15,6 +15,7 @@ import com.example.service.recordWorkflow.RecordWorkFlowService;
 import com.example.util.NetworkConstant;
 
 @RestController
+@CrossOrigin("http://Localhost:5173")
 @RequestMapping("/api/v1/recordFlow")
 public class RecordFlowCrudController {
 
